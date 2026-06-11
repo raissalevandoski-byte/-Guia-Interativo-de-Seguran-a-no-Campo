@@ -1,0 +1,67 @@
+Guia Interativo de Segurança no Campo
+Tema
+Saúde, Bem-Estar e Segurança no Trabalho Rural.
+
+Categoria Agrinho
+Programação (Desenvolvimento Web / Aplicativo Mobile).
+
+Sobre o Projeto
+O Guia Interativo de Segurança no Campo é uma aplicação digital voltada para a proteção e preservação da vida dos trabalhadores rurais. O projeto nasceu da necessidade de transformar livretos, cartilhas e manuais de segurança tradicionais — que costumam ser longos e de difícil consulta no dia a dia — em uma ferramenta tecnológica rápida, visual e dinâmica. O aplicativo foi desenhado com foco na usabilidade em dispositivos móveis (Mobile-First), garantindo que as orientações de prevenção estejam literalmente na palma da mão do produtor antes e durante suas atividades no campo.
+
+Objetivo
+O objetivo principal é reduzir o índice de acidentes de trabalho no ambiente rural por meio da conscientização ativa e da automação de processos de checagem. A ferramenta visa criar uma cultura de prevenção diária na fazenda, permitindo que o trabalhador inspecione seus equipamentos de forma intuitiva, compreenda os riscos de cada operação e tenha acesso a tomadas de decisão rápidas em caso de emergências, salvaguardando a integridade física do trabalhador e o patrimônio do produtor.
+
+Funcionalidades do Site
+Checklist de Inspeção Diária: Um painel interativo focado na checagem de itens críticos de segurança do trator (óleo, freios, pneus e protetores) antes de dar a partida.
+
+Barra de Progresso em Tempo Real: Um indicador visual que calcula dinamicamente a porcentagem de conclusão das tarefas de segurança à medida que o usuário interage com a tela.
+
+Sistema de Diagnóstico Fluido: Um botão de validação que analisa as respostas e emite um veredito claro e colorido (Verde para Seguro, Vermelho para Perigo) sobre a condição de trabalho.
+
+Menu de Navegação Inteligente: Botões em formato de cápsula que simulam o ecossistema completo planejado para o aplicativo (Checklist, Simulador de EPIs e Guia de Primeiros Socorros).
+
+Tecnologias Utilizadas
+O projeto foi desenvolvido utilizando tecnologias web nativas, o que garante leveza, velocidade de carregamento e compatibilidade com qualquer smartphone ou computador:
+
+HTML5: Utilizado para a construção da estrutura semântica da página, organização dos blocos de conteúdo e elementos de formulário (checkboxes).
+
+CSS3: Responsável pelo design visual premium, utilizando variáveis de estilo (CSS Variables), gradientes modernos, cantos arredondados, sombras em camadas e efeitos de transição que dão ao site a aparência de um aplicativo instalado.
+
+JavaScript (Vanilla): Utilizado para processar a lógica do sistema, manipular o Document Object Model (DOM) em tempo real e ativar recursos avançados do navegador.
+
+Estrutura de Arquivos
+O repositório é organizado de forma simples e limpa na raiz do projeto:
+
+index.html — Contém todo o esqueleto e os textos da aplicação.
+
+style.css — Arquivo responsável por toda a identidade visual, cores e responsividade.
+
+script.js — Concentra a lógica de programação, cálculos e eventos de interação.
+
+Como Executar o Projeto
+Por se tratar de um site estático e otimizado, o projeto não exige a instalação de dependências ou servidores pesados:
+
+Faça o download dos arquivos ou clone este repositório no GitHub.
+
+Dê um duplo clique no arquivo index.html para abri-lo instantaneamente em qualquer navegador de sua preferência (Chrome, Edge, Safari, Firefox).
+
+Para visualização pública online, o projeto está configurado para publicação automática através do GitHub Pages, bastando ativar a ferramenta nas configurações do repositório.
+
+Acessibilidade
+A acessibilidade é um dos pilares de inclusão social deste projeto, considerando a diversidade do público do campo. O aplicativo utiliza a API de Síntese de Voz do JavaScript (SpeechSynthesis), que faz o navegador narrar os alertas de segurança em áudio para o usuário. Essa funcionalidade foi projetada para apoiar trabalhadores rurais com baixa alfabetização, dificuldades visuais ou que estejam operando sob condições de luz solar intensa que dificultem a leitura na tela do celular. Além disso, as cores do layout foram escolhidas para garantir alto contraste, e os botões possuem tamanho ampliado para facilitar o toque de dedos calejados ou cobertos por luvas.
+
+Sustentabilidade
+A ferramenta contribui diretamente para a sustentabilidade ambiental e econômica da propriedade rural. Ao digitalizar checklists e guias, elimina-se completamente a necessidade de impressão de papéis e fichas diárias na fazenda, reduzindo a pegada de carbono. No aspecto econômico e operacional, a manutenção preventiva estimulada pelo aplicativo evita o desgaste prematuro de peças, reduz o consumo excessivo de combustível gerado por mau funcionamento de máquinas e previne acidentes graves que poderiam paralisar a produção familiar.
+
+Conceitos de Programação Aplicados
+A construção deste software envolveu a aplicação prática de importantes conceitos da ciência da computação:
+
+Manipulação de Eventos: Uso de ouvintes (EventListeners) que detectam o clique do usuário nos checkboxes e acionam funções automáticas.
+
+Lógica Condicional: Estruturas de decisão (if/else) para avaliar se todos os critérios de segurança foram cumpridos e definir a resposta do sistema.
+
+Operadores Lógicos: Utilização do operador AND (&&) para validar a marcação simultânea e obrigatória de múltiplos elementos.
+
+Funções e Escopo: Organização do código em blocos reutilizáveis com responsabilidades bem definidas (como a função de cálculo de progresso e a função de disparo de voz).
+
+Manipulação de DOM: Alteração dinâmica de classes e elementos HTML em tempo real através do JavaScript para mudar cores e textos sem precisar recarregar a página.
