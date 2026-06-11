@@ -1,18 +1,15 @@
-/* Importando uma fonte moderna e limpa do Google Fonts */
+/* Importando fontes limpas e profissionais */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-    --primary-color: #2c6e49;       /* Verde folha fechado, transmite profissionalismo */
-    --primary-light: #4c956c;       /* Verde mais claro para destaques */
-    --accent-color: #ff9100;        /* Laranja para alertas e interações */
-    --bg-color: #f8fafd;            /* Fundo suave, não cansa os olhos */
-    --card-bg: #ffffff;             /* Fundo dos painéis */
-    --text-main: #1e293b;           /* Cinza quase preto para excelente leitura */
-    --text-muted: #64748b;          /* Cinza para textos secundários */
-    --success-bg: #ecfdf5;          /* Fundo verde de sucesso */
-    --success-text: #065f46;        /* Texto verde de sucesso */
-    --danger-bg: #fef2f2;           /* Fundo vermelho de atenção */
-    --danger-text: #991b1b;         /* Texto vermelho de atenção */
+    --primary: #1b4d3e;          /* Verde Floresta Profundo (Premium) */
+    --primary-light: #2c6e49;    /* Verde Campo Activo */
+    --accent: #ff9100;           /* Laranja Alerta */
+    --bg-gradient: linear-gradient(180deg, #f0fdf4 0%, #f8fafc 100%);
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --text-main: #0f172a;        /* Azul Escuro Quase Preto */
+    --text-muted: #475569;       /* Cinza Elegante */
+    --border-color: #e2e8f0;
 }
 
 * {
@@ -20,50 +17,253 @@
     margin: 0;
     padding: 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
-    background-color: var(--bg-color);
+    background: var(--bg-gradient);
     color: var(--text-main);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
-/* Header com degradê moderno e elegante */
+/* Header Minimalista e Sofisticado */
 header {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
     color: white;
     text-align: center;
-    padding: 40px 20px;
-    border-bottom-left-radius: 24px;
-    border-bottom-right-radius: 24px;
-    box-shadow: 0 10px 25px rgba(44, 110, 73, 0.15);
+    padding: 50px 24px 60px 24px;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(27, 77, 62, 0.12);
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
-    letter-spacing: -0.5px;
+    letter-spacing: -1px;
     margin-bottom: 8px;
 }
 
 header p {
     font-size: 1rem;
-    color: #e8f5e9;
+    color: #cbd5e1;
     font-weight: 500;
-    opacity: 0.9;
 }
 
 .container {
-    max-width: 540px;
+    max-width: 500px;
     width: 100%;
-    margin: -20px auto 40px auto; /* Sobe um pouco para sobrepor o header */
+    margin: -35px auto 40px auto; /* Flutua perfeitamente sobre o header */
     padding: 0 20px;
+    z-index: 2;
 }
 
-/* Menu de Abas estilo cápsula */
+/* Menu de Abas Estilo Dock do iOS */
 .menu-abas {
     display: flex;
-    background-color: var(--card-bg);
-    padding: 8px;
+    background: var(--card-bg);
+    padding: 6px;
+    border-radius: 20px;
+    gap: 6px;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    margin-bottom: 24px;
+}
+
+.aba-btn {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    padding: 14px 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.aba-btn.active {
+    background-color: var(--primary);
+    color: white;
+    box-shadow: 0 8px 20px rgba(27, 77, 62, 0.2);
+}
+
+/* Card Principal (Estilo Neumorfismo Suave) */
+.conteudo-painel {
+    background: var(--card-bg);
+    padding: 32px 24px;
+    border-radius: 28px;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.conteudo-painel h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+}
+
+.conteudo-painel > p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+/* Container da Barra de Progresso Arredondada */
+.progresso-container {
+    background: #e2e8f0 !important;
+    border-radius: 100px !important;
+    height: 8px !important;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#progresso-barra {
+    background: linear-gradient(90deg, var(--primary-light), #10b981) !important;
+    border-radius: 100px;
+}
+
+#progresso-texto {
+    font-size: 0.8rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+}
+
+/* Itens de Seleção Transformados em Cards Interativos */
+.item-check {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 20px 20px 20px 54px;
+    margin-bottom: 14px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+    background: #ffffff;
+    border: 1.5px solid var(--border-color);
+    border-radius: 18px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px rgba(15, 23, 42, 0.01);
+}
+
+/* Efeito de flutuação ao passar o mouse ou focar */
+.item-check:hover {
+    border-color: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(44, 110, 73, 0.06);
+}
+
+/* Estilo customizado do Checkbox Redondo (Estilo Apple Health) */
+.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    height: 24px;
+    width: 24px;
+    background-color: #f1f5f9;
+    border-radius: 50%; /* Deixa redondo */
+    border: 2px solid #cbd5e1;
+    transition: all 0.25s ease;
+}
+
+/* Quando selecionado (Check) */
+.item-check input:checked ~ .checkmark {
+    background-color: var(--primary-light);
+    border-color: var(--primary-light);
+    transform: translateY(-50%) scale(1.05);
+}
+
+/* Altera o card inteiro quando o item é marcado */
+.item-check:has(input:checked) {
+    border-color: var(--primary-light);
+    background-color: #f0fdf4;
+}
+
+/* Ícone interno do Check */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2.5px 2.5px 0;
+    transform: rotate(45deg);
+}
+
+.item-check input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Botão Principal Estilo Moderno Inteligente */
+#btn-verificar {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+    border: none;
+    padding: 18px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 18px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(27, 77, 62, 0.2);
+    transition: all 0.25s ease;
+    margin-top: 10px;
+}
+
+#btn-verificar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(27, 77, 62, 0.3);
+}
+
+#btn-verificar:active {
+    transform: translateY(1px);
+}
+
+/* Painel de Status com Design de Alerta Fluido */
+.status-painel {
+    margin-top: 24px;
+    padding: 20px;
+    border-radius: 18px;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    background-color: #f8fafc;
+    border: 2px dashed #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.seguro {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 2px solid #10b981;
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.1);
+}
+
+.perigo {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 2px solid #ef4444;
+    box-shadow: 0 10px 20px rgba(239, 68, 68, 0.1);
+}
+
+footer {
+    text-align: center;
+    margin-top: auto;
+    padding: 30px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+}
