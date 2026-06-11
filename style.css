@@ -1,161 +1,69 @@
-/* Configurações Gerais */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f5;
-    color: #333;
-    margin: 0;
-    padding: 0;
+/* Importando uma fonte moderna e limpa do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #2c6e49;       /* Verde folha fechado, transmite profissionalismo */
+    --primary-light: #4c956c;       /* Verde mais claro para destaques */
+    --accent-color: #ff9100;        /* Laranja para alertas e interações */
+    --bg-color: #f8fafd;            /* Fundo suave, não cansa os olhos */
+    --card-bg: #ffffff;             /* Fundo dos painéis */
+    --text-main: #1e293b;           /* Cinza quase preto para excelente leitura */
+    --text-muted: #64748b;          /* Cinza para textos secundários */
+    --success-bg: #ecfdf5;          /* Fundo verde de sucesso */
+    --success-text: #065f46;        /* Texto verde de sucesso */
+    --danger-bg: #fef2f2;           /* Fundo vermelho de atenção */
+    --danger-text: #991b1b;         /* Texto vermelho de atenção */
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header com degradê moderno e elegante */
 header {
-    background-color: #2e7d32; /* Verde Campo */
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
     color: white;
     text-align: center;
-    padding: 20px 10px;
+    padding: 40px 20px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    box-shadow: 0 10px 25px rgba(44, 110, 73, 0.15);
 }
 
 header h1 {
-    margin: 0;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1rem;
+    color: #e8f5e9;
+    font-weight: 500;
+    opacity: 0.9;
 }
 
 .container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 15px;
+    max-width: 540px;
+    width: 100%;
+    margin: -20px auto 40px auto; /* Sobe um pouco para sobrepor o header */
+    padding: 0 20px;
 }
 
-/* Menu de Abas */
+/* Menu de Abas estilo cápsula */
 .menu-abas {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.aba-btn {
-    flex: 1;
-    background-color: #e0e0e0;
-    border: none;
-    padding: 12px 5px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.aba-btn.active {
-    background-color: #f57c00; /* Laranja Alerta */
-    color: white;
-}
-
-/* Estilização do Conteúdo */
-.conteudo-painel {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.checklist-grupo {
-    margin: 20px 0;
-}
-
-/* Customização dos Checkboxes para telas de celular */
-.item-check {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 15px;
-    cursor: pointer;
-    font-size: 1rem;
-    line-height: 1.4;
-}
-
-.item-check input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 22px;
-    width: 22px;
-    background-color: #eee;
-    border-radius: 4px;
-    border: 2px solid #2e7d32;
-}
-
-.item-check input:checked ~ .checkmark {
-    background-color: #2e7d32;
-}
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.item-check input:checked ~ .checkmark:after {
-    display: block;
-}
-
-.item-check .checkmark:after {
-    left: 7px;
-    top: 3px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
-}
-
-/* Botão de Ação */
-#btn-verificar {
-    width: 100%;
-    background-color: #2e7d32;
-    color: white;
-    border: none;
-    padding: 15px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-#btn-verificar:hover {
-    background-color: #1b5e20;
-}
-
-/* Painel de Mensagem/Status */
-.status-painel {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: bold;
-    background-color: #f1f1f1;
-}
-
-.seguro {
-    background-color: #c8e6c9;
-    color: #256029;
-    border: 2px solid #2e7d32;
-}
-
-.perigo {
-    background-color: #ffcdd2;
-    color: #c62828;
-    border: 2px solid #c62828;
-}
-
-footer {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 0.8rem;
-    color: #777;
-}
+    background-color: var(--card-bg);
+    padding: 8px;
