@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Interativo de Segurança no Campo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Guia Interativo de Segurança no Campo</h1>
+        <p>Tecnologia e Proteção para o Trabalhador Rural</p>
+    </header>
+
+    <main class="container">
+        <section class="menu-abas">
+            <button class="aba-btn active">🚜 Checklist Máquinas</button>
+            <button class="aba-btn" onclick="alert('Funcionalidade em desenvolvimento para o Agrinho!')">🛡️ Simulador EPI</button>
+            <button class="aba-btn" onclick="alert('Funcionalidade em desenvolvimento para o Agrinho!')">🚑 Primeiros Socorros</button>
+        </section>
+
+        <section class="conteudo-painel">
+            <h2>Checklist Diário: Inspeção do Trator</h2>
+            <p>Marque todos os itens antes de dar a partida no motor:</p>
+
+            <div class="checklist-grupo">
+                <label class="item-check">
+                    <input type="checkbox" id="oleo">
+                    <span class="checkmark"></span>
+                    Nível do óleo do motor e água do radiador checados.
+                </label>
+                
+                <label class="item-check">
+                    <input type="checkbox" id="freios">
+                    <span class="checkmark"></span>
+                    Freios de serviço e de estacionamento testados.
+                </label>
+
+                <label class="item-check">
+                    <input type="checkbox" id="protetor">
+                    <span class="checkmark"></span>
+                    Protetores das peças móveis e tomada de força (TDP) no lugar.
+                </label>
+
+                <label class="item-check">
+                    <input type="checkbox" id="pneus">
+                    <span class="checkmark"></span>
+                    Calibragem e estado dos pneus verificados.
+                </label>
+            </div>
+
+            <button id="btn-verificar" onclick="verificarSeguranca()">Verificar Status da Máquina</button>
+
+            <div id="resultado" class="status-painel">
+                Aguardando verificação...
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto Desenvolvido para o Concurso Agrinho 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
